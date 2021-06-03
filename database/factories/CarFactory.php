@@ -29,7 +29,7 @@ class CarFactory extends Factory
             'year' => $this->faker->year(),
             'max_speed' => $this->faker->numberBetween(20, 300),
             'is_automatic' => $this->faker->boolean(),
-            'engine' => Arr::random(['diesel', 'petrol', 'electric', 'hybrid']),
+            'engine' => ucfirst(Arr::random(['diesel', 'petrol', 'electric', 'hybrid'])),
             'number_of_doors' => $this->faker->numberBetween(2, 5)
         ];
     }
